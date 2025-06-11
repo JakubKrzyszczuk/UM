@@ -32,7 +32,7 @@ y = team_season_df["rank_home"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=40)
 
-model = RandomForestRegressor(n_estimators=100, random_state=42)
+model = RandomForestRegressor(n_estimators=100, random_state=40)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
