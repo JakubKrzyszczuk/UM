@@ -43,6 +43,5 @@ print(f"\n Liczba drużyn w zbiorze: {len(team_season_df)}")
 print(f" MAE (błąd średni): {mae:.2f}")
 print(f" R² score: {r2:.2f}")
 
-# 8. Zapisanie modelu
 joblib.dump(model, "../models/team_rank_predictor.pkl")
 print(" Model zapisany jako 'team_rank_predictor.pkl'")
