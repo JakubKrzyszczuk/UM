@@ -9,7 +9,7 @@ cursor = conn.cursor()
 
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 tables = [row[0] for row in cursor.fetchall()]
-print(f"📦 Zawartość bazy danych: {tables}")
+print(f" Zawartość bazy danych: {tables}")
 
 for table in tables:
     print(f"\n🔸 Tabela: {table}")
@@ -19,7 +19,7 @@ for table in tables:
         print(f"   - {col[1]} ({col[2]})")
 
     df = pd.read_sql(f"SELECT * FROM {table}", conn)
-    print("\n📄 Wszystkie dane:")
-    print(df.to_string(index=False))  # pełna tabela
+    print("\n Wszystkie dane:")
+    print(df.to_string(index=False)) 
 
 conn.close()
