@@ -24,7 +24,7 @@ team_season_df = df.groupby(["team_name_home", "points_home"]).agg({
     "home_market_value_avg_mil_eur": "mean",
     "home_avg_age": "mean",
     "goal_difference_home": "max",
-    "rank_home": "max"  # cel
+    "rank_home": "max"  
 }).reset_index()
 
 X = team_season_df.drop(columns=["rank_home", "team_name_home"])
